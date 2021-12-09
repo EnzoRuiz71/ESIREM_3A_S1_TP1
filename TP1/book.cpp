@@ -3,7 +3,7 @@
 #include "book.h"
 
 
-Book::Book(std::string title, std::string writer, std::string language, std::string type, Date date, std::string ISBN) :
+Book::Book(std::string title, Writer writer, std::string language, std::string type, Date date, std::string ISBN) :
 			_title(title), _writer(writer), _language(language), _type(type), _date(date), _ISBN(ISBN) {
 }
 
@@ -12,8 +12,7 @@ std::string Book::title() const
 	return _title;
 	
 }
-
-std::string Book::writer() const
+Writer Book::writer() const
 {
 	return _writer;
 	
@@ -31,7 +30,7 @@ std::string Book::type() const
 	
 }
 
-Date Book::date()
+Date Book::date() const
 {
 	return _date;
 	

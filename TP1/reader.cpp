@@ -2,8 +2,8 @@
 #include <string>
 #include "reader.h"
 
-Reader::Reader(std::string user_id, std::string first_name, std::string last_name, std::string borrowed_ISBN) : 
-				_user_id(user_id), _first_name(first_name), _last_name(last_name), _borrowed_ISBN(borrowed_ISBN) {
+Reader::Reader(std::string user_id, std::string first_name, std::string last_name, Book book) : 
+				_user_id(user_id), _first_name(first_name), _last_name(last_name), _book(book) {
 }
 
 std::string Reader::user_id() const {
@@ -18,8 +18,8 @@ std::string Reader::last_name() const{
 	return _last_name;
 }
 
-std::string Reader::borrowed_ISBN() const {
-	return _borrowed_ISBN;
+Book Reader::book() const {
+	return _book;
 }
 
 void Reader::updateUserID(std::string user_id) {
